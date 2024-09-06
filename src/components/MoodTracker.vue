@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+// TODO: move MoodObject and moods out to its own file later with harder typing
 interface MoodObject {
   value: string
   icon: string
 }
 
-// TODO: move this out to its own file later with harder typing
-const moods: string[] = ['Happy', 'Content', 'Sad']
-const moodObjects: MoodObject[] = [
+const moods: MoodObject[] = [
   {
     value: 'Happy',
     icon: 'face-smile'
@@ -30,12 +29,7 @@ const track = (mood: string) => {
 
 <template>
   <div class="mood-container">
-    <div
-      v-for="mood in moodObjects"
-      v-bind:key="mood.value"
-      @click="track(mood.value)"
-      class="button"
-    >
+    <div v-for="mood in moods" v-bind:key="mood.value" @click="track(mood.value)" class="button">
       <FontAwesomeIcon :icon="['far', mood.icon]" />
       <p>{{ mood.value }}</p>
     </div>
