@@ -5,6 +5,20 @@ import MoodRater from '../components/rating/MoodRater.vue'
 
 <template>
   <main>
-    <MoodRater />
+    <div id="wrapper">
+      <MoodRater />
+      <div>this needs journal entry associated here too. maybe optional</div>
+    </div>
   </main>
 </template>
+
+<style scoped lang="css">
+#wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper > div {
+  margin-bottom: 10px;
+}
+</style>

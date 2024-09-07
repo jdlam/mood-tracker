@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import MoodRater from '../components/rating/MoodRater.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main>
-    <MoodRater />
+    <div>This is a journal view? maybe needs to be updated or combined with Mood rater.</div>
   </main>
 </template>
