@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import MoodRater from '@/components/rating/MoodRater.vue'
+import MoodRater from '../components/rating/MoodRater.vue'
 </script>
 
 <template>
   <main>
     <MoodRater />
-    <div>This is our home page!</div>
   </main>
 </template>

@@ -1,11 +1,10 @@
 <script setup lang="ts">
 // import MoodsList from '../components/MoodsList.vue'
-import MoodTracker from '../components/MoodTracker.vue'
+import MoodRater from '../components/rating/MoodRater.vue'
 </script>
 
 <template>
   <main>
-    <MoodTracker />
-    <!-- <MoodsList /> -->
+    <MoodRater />
   </main>
 </template>
