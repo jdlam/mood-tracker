@@ -4,7 +4,20 @@ import MoodRater from '@/components/rating/MoodRater.vue'
 
 <template>
   <main>
-    <MoodRater />
-    <div>This is our home page!</div>
+    <div id="wrapper">
+      <MoodRater />
+    </div>
   </main>
 </template>
+
+<style scoped lang="css">
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+#wrapper > div {
+  margin-bottom: 10px;
+}
+</style>

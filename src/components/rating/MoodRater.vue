@@ -40,6 +40,7 @@ const track = (mood: string) => {
 .mood-container {
   display: flex;
   width: 100%;
+  max-width: 600px;
   flex-direction: row;
   justify-content: space-around;
 }

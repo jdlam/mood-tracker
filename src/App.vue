@@ -24,6 +24,13 @@ header {
   max-height: 100vh;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+}
+
 h2 {
   text-align: center;
   font-size: 2rem;
@@ -35,7 +42,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -59,13 +66,6 @@ nav a:first-of-type {
 @media (min-width: 1024px) {
   header {
     display: flex;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    width: 100%;
-    flex-wrap: wrap;
   }
 
   nav {

@@ -16,6 +16,7 @@ import MoodRater from '../components/rating/MoodRater.vue'
 #wrapper {
   display: flex;
   flex-direction: column;
+  place-items: center;
 }
 
 #wrapper > div {
