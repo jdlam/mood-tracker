@@ -6,6 +6,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+const pinia = createPinia()
 const app = createApp(App)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,7 +26,7 @@ library.add(faFaceFrown, faFaceMeh, faFaceSmile, farFaceFrown, farFaceMeh, farFa
 /* add icons to the library */
 app.component('font-awesome-icon', FontAwesomeIcon)
 
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 
 app.mount('#app')

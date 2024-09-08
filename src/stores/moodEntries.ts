@@ -36,18 +36,20 @@ export const useMoodEntriesStore = defineStore('moodEntries', {
     }
   },
   getters: {
-    getCount(): number {
-      return this.moodEntries.length
+    getCount(state): number {
+      return state.moodEntries?.length
     },
-    getByIndex(idx: number): ExistingEntry {
-      return this.moodEntries[idx]
+    getByIndex(state) {
+      return (idx: number): ExistingEntry => state.moodEntries?.[idx]
     },
-    getByDate(date: string): ExistingEntry {
-      console.log(date)
-      // TODO: get entry by date
-      // simplify date to the day
-      // identify if a there is an entry with that same date
-      return this.moodEntries[0]
+    getByDate(state) {
+      return (date: string): ExistingEntry | undefined => {
+        console.log(date)
+        // TODO: get entry by date
+        // simplify date to the day
+        // identify if a there is an entry with that same date
+        return state.moodEntries?.[0]
+      }
     }
   }
 })
