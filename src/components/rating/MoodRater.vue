@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { useMoodEntriesStore } from '@/stores/moodEntries'
 
 // TODO: move MoodObject and moods out to its own file later with harder typing
 interface MoodObject {
@@ -22,8 +23,11 @@ const moods: MoodObject[] = [
   }
 ]
 
+const moodEntries = useMoodEntriesStore()
+
 const track = (mood: string) => {
   console.log('mood is', mood)
+  moodEntries.add({ mood, text: '' })
 }
 </script>
 

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import MoodRater from '@/components/rating/MoodRater.vue'
+import MoodList from '@/components/shared/MoodList.vue'
 </script>
 
 <template>
   <main>
     <div id="wrapper">
-      <MoodRater />
+      <MoodList />
     </div>
   </main>
 </template>
