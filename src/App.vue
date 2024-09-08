@@ -4,11 +4,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+      <h2>Mood Tracker</h2>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/mood">Moods</RouterLink>
@@ -27,9 +24,10 @@ header {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 nav {
@@ -37,6 +35,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 nav a.router-link-exact-active {
@@ -60,23 +59,17 @@ nav a:first-of-type {
 @media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
     display: flex;
     place-items: flex-start;
+    width: 100%;
     flex-wrap: wrap;
   }
 
   nav {
-    text-align: left;
-    margin-left: -1rem;
+    text-align: center;
     font-size: 1rem;
 
     padding: 1rem 0;
